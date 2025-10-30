@@ -205,6 +205,26 @@ body {
     text-align: center;
 }
 
+/* Showcase section */
+.showcase { padding: 4rem 2rem; text-align: center; }
+.showcase .section-sub { color: var(--text-secondary); margin-bottom: 1.5rem; }
+.showcase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; align-items: stretch; }
+.showcase-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,0.04); box-shadow: 0 10px 30px rgba(2,6,23,0.6); transition: transform 0.45s cubic-bezier(.2,.8,.2,1), box-shadow 0.3s ease; }
+.showcase-card:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 24px 60px rgba(2,6,23,0.7); }
+.card-media { position: relative; height: 220px; overflow: hidden; }
+.card-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity 0.6s ease, transform 0.6s ease; }
+.card-media .img-before { filter: grayscale(10%) contrast(0.95) brightness(0.95); }
+.card-media .img-after { opacity: 0; transform: scale(1.08); filter: contrast(1.15) saturate(1.25) brightness(1.02) sepia(0.05); mix-blend-mode: screen; }
+.showcase-card:hover .card-media .img-after { opacity: 1; transform: scale(1); }
+.card-info { padding: 1rem 1.2rem 1.6rem; text-align: left; }
+.badge { display: inline-block; padding: 0.25rem 0.6rem; border-radius: 999px; font-size: 0.78rem; background: rgba(255,255,255,0.03); color: #fff; border: 1px solid rgba(255,255,255,0.04); }
+.badge.tech { background: linear-gradient(90deg,#338AFF,#3CF0C5); color: #061022; font-weight:700; }
+.card-info h3 { margin: 0.6rem 0 0.3rem; font-size: 1.1rem; }
+.muted { color: var(--text-secondary); font-size: 0.95rem; }
+
+/* small decorative tech overlay */
+.showcase-card::after { content: ''; position: absolute; right: -40px; top: -40px; width: 180px; height: 180px; background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.02), transparent 40%); transform: rotate(25deg); pointer-events: none; }
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

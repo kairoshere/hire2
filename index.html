@@ -16,34 +16,83 @@
         <div class="social-stats" data-aos="fade-up" data-aos-delay="200">
             <div class="stat">
                 <i class="fab fa-facebook"></i>
-                <h3>30K+</h3>
+                <h3 class="fb-count">0</h3>
                 <p>Facebook Followers</p>
             </div>
             <div class="stat">
                 <i class="fab fa-instagram"></i>
-                <h3>11K+</h3>
+                <h3 class="ig-count">0</h3>
                 <p>Instagram Followers</p>
             </div>
         </div>
     </section>
 
-    <section class="services">
+    <!-- Showcase: Luxury / Tech edited samples -->
+    <section id="showcase" class="showcase" data-aos="fade-up">
+        <h2 class="section-title">Showcase — Before & After</h2>
+        <p class="section-sub">A taste of our signature luxury edits and tech-driven enhancements.</p>
+
+        <div class="showcase-grid">
+            <article class="showcase-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="card-media">
+                    <img class="img-before" src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?q=80&w=1200&auto=format&fit=crop&crop=entropy" alt="before">
+                    <img class="img-after" src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?q=80&w=1200&auto=format&fit=crop&crop=entropy" alt="after">
+                </div>
+                <div class="card-info">
+                    <span class="badge">Luxury Edit</span>
+                    <h3>Portrait Enhancement</h3>
+                    <p class="muted">Clean skin, cinematic color grade and subtle retouching.</p>
+                </div>
+            </article>
+
+            <article class="showcase-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card-media">
+                    <img class="img-before" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop&crop=entropy" alt="before">
+                    <img class="img-after" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop&crop=entropy" alt="after">
+                </div>
+                <div class="card-info">
+                    <span class="badge tech">Tech Boost</span>
+                    <h3>Color & Contrast</h3>
+                    <p class="muted">High-contrast cinematic look with color harmonization.</p>
+                </div>
+            </article>
+
+            <article class="showcase-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="card-media">
+                    <img class="img-before" src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1200&auto=format&fit=crop&crop=entropy" alt="before">
+                    <img class="img-after" src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1200&auto=format&fit=crop&crop=entropy" alt="after">
+                </div>
+                <div class="card-info">
+                    <span class="badge">Creative Composite</span>
+                    <h3>Artistic Composite</h3>
+                    <p class="muted">Layered effects and premium finishing for standout visuals.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="services" id="services">
         <h2 data-aos="fade-up">Our Services</h2>
         <div class="services-grid">
             <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                <i class="fas fa-edit fa-3x"></i>
+                <div class="service-icon"><i class="fas fa-edit fa-2x"></i></div>
                 <h3>Professional Photo Editing</h3>
-                <p>Transform your photos with our premium editing services</p>
+                <p>Transform your photos with our premium editing services.</p>
+                <button class="btn-details" data-service="photo-editing">Details</button>
             </div>
+
             <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                <i class="fas fa-ad fa-3x"></i>
-                <h3>Paid Promotions</h3>
-                <p>Boost your brand with our promotional services</p>
+                <div class="service-icon"><i class="fas fa-file-invoice-dollar fa-2x"></i></div>
+                <h3>Paid Edits</h3>
+                <p>High-quality paid photo edits — quick turnaround and premium results.</p>
+                <button class="btn-details" data-service="paid-edits">Contact for Paid Edits</button>
             </div>
+
             <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                <i class="fas fa-camera-retro fa-3x"></i>
+                <div class="service-icon"><i class="fas fa-camera-retro fa-2x"></i></div>
                 <h3>Custom Edits</h3>
-                <p>Personalized editing solutions tailored to your needs</p>
+                <p>Personalized editing solutions tailored to your needs.</p>
+                <button class="btn-details" data-service="custom-edits">Details</button>
             </div>
         </div>
     </section>
@@ -75,6 +124,29 @@
     </section>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Modal markup for service details -->
+    <div id="service-modal" class="modal" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-panel">
+            <button class="modal-close" aria-label="Close">&times;</button>
+            <div class="modal-body">
+                <h3 id="modal-title">Service Details</h3>
+                <p id="modal-desc">Details about the selected service will appear here.</p>
+
+                <div class="modal-contacts">
+                    <h4>Contact for Paid Services</h4>
+                    <p><strong>Email:</strong> <a href="mailto:jjk89030@gmail.com">jjk89030@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+917889965656">+91 7889965656</a></p>
+                    <p><strong>Instagram:</strong> <a href="https://instagram.com/ix.psycho9" target="_blank">@ix.psycho9</a></p>
+                </div>
+
+                <div class="modal-actions">
+                    <a id="modal-email" class="btn-primary" href="mailto:jjk89030@gmail.com">Email Now</a>
+                    <a id="modal-dm" class="btn-secondary" href="https://instagram.com/ix.psycho9" target="_blank">Send DM</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
